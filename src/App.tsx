@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FooterComponent from "./components/Footer";
+import HeaderComponent from "./components/Header";
+import SidenavComponent from "./components/Sidenav";
+import { VendaContextProdiver } from "./context/VendaContext";
+import ResumoPage from "./pages/Resumo";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <VendaContextProdiver>
+      <div className="h-screen font-montserrat text-color_2 bg-color_4">
+        <SidenavComponent />
+        <main>
+          <HeaderComponent />
+          <ResumoPage />
+        </main>
+        <FooterComponent />
+      </div>
+    </VendaContextProdiver>
   );
 }
-
-export default App;
