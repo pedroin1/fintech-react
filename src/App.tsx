@@ -8,9 +8,9 @@ export default function App() {
   return (
     <VendaContextProdiver>
       <div className="h-screen font-montserrat text-color_2 bg-color_4">
+        <HeaderComponent />
         <SidenavComponent />
         <main>
-          <HeaderComponent />
           <ResumoPage />
         </main>
         <FooterComponent />
