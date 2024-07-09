@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import FooterComponent from "./components/Footer";
 import HeaderComponent from "./components/Header";
 import SidenavComponent from "./components/Sidenav";
@@ -7,13 +8,14 @@ import ResumoPage from "./pages/Resumo";
 export default function App() {
   return (
     <VendaContextProdiver>
-      <div className="h-screen font-montserrat text-color_2 bg-color_4">
-        <HeaderComponent />
+      <div className="grid grid-cols-[300px_auto] font-montserrat text-color_2 bg-color_4">
         <SidenavComponent />
         <main>
-          <ResumoPage />
+          <HeaderComponent />
+          <Suspense fallback={<span>Carrengado...</span>}>
+            <ResumoPage />
+          </Suspense>
         </main>
-        <FooterComponent />
       </div>
     </VendaContextProdiver>
   );
