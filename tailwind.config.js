@@ -16,6 +16,13 @@ module.exports = {
         small: "0.625rem",
         default: "1.25rem",
       },
+      screens: {
+        small: { max: "350px" },
+        tiny: { max: "500px" },
+        medium: { max: "768px" },
+        large: { max: "1024px" },
+        extra_large: { max: "1280px" },
+      },
     },
   },
   plugins: [],

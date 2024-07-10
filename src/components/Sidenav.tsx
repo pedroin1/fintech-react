@@ -16,7 +16,7 @@ export default function SidenavComponent({ ...props }: Props) {
       {...props}
     >
       <FintechSVG title="Fintech Logo" />
-      <ul className="mt-12 flex flex-col gap-4">
+      <ul className="mt-12 flex flex-col gap-4 medium:grid medium:grid-cols-[1fr_1fr_1fr] medium:mt-4">
         <li className="flex items-center w-full cursor-pointer group">
           <div className="bg-white p-1 rounded-l-full">
             <HomeIcon />

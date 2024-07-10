@@ -4,7 +4,7 @@ import ItemVenda from "./ItemVenda";
 
 export default function ListVendas({ vendas, ...props }: ListProps) {
   return (
-    <ul {...props}>
+    <ul className="my-default flex flex-col gap-small" {...props}>
       {vendas?.map((venda, index) => (
         <ItemVenda key={index} venda={venda} />
       ))}

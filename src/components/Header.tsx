@@ -32,9 +32,9 @@ export default function HeaderComponent() {
 
   return (
     <header>
-      <div className="grid grid-cols-[1fr_1fr]">
+      <div className="grid grid-cols-[1fr_1fr] large:grid-cols-1">
         <DateRange />
-        <h1 className="text-3xl m-default p-default bg-color_3 font-bold rounded-2xl">
+        <h1 className="text-3xl my-default p-default bg-color_3 font-bold rounded-2xl large:last:row-start-1 medium:my-1">
           {handleSetTitlePage()}
         </h1>
       </div>

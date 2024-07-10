@@ -5,8 +5,8 @@ import { formatNumberToBrCurrency } from "../util/NumberUtils";
 export default function ItemVenda({ venda }: Props) {
   if (venda === null) return;
   return (
-    <div className="flex flex-wrap justify-between items-center mt-2 bg-white rounded-2xl p-default">
-      <div className="flex items-center gap-1 hover:underline text-purple-700 cursor-pointer">
+    <div className="p-small flex justify-between items-center bg-white rounded-2xl medium:flex-col medium:items-start">
+      <div className="flex items-center gap-1 hover:underline text-purple-700 cursor-pointer font-semibold">
         <a href={`/venda/${venda.id}`}>{venda.id}</a>
         <SquareArrowUpRight size={18} />
       </div>

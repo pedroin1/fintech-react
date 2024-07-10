@@ -7,7 +7,7 @@ export default function DateRange() {
   return (
     <form
       onSubmit={(e) => e.preventDefault()}
-      className="flex gap-default p-default m-default rounded-2xl bg-white"
+      className="flex gap-default p-default m-default rounded-2xl bg-white medium:flex-col"
     >
       <InputComponent
         label="Data Inicio"

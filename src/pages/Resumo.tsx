@@ -9,7 +9,7 @@ export default function ResumoPage() {
 
   return (
     <section className="max-h-fit min-h-screen mx-default">
-      <div className="flex gap-default flex-wrap">
+      <div className="mt-default flex gap-default flex-wrap large:flex-col">
         <div className="bg-white p-default rounded-2xl flex-1">
           <h2 className="text-3xl font-semibold text-color_2 mb-2">Vendas: </h2>
           <span className="font-bold text-3xl">
@@ -45,14 +45,18 @@ export default function ResumoPage() {
           </span>
         </div>
       </div>
-      <div className="mt-4 mb-4 p-default rounded-2xl bg-white">
-        {data && <ChartVenda dataVendas={data} />}
-      </div>
-      <div className="flex items-center gap-2 mt-4 mb-4 p-default rounded-2xl bg-color_3 text-color-2">
-        <h1 className="text-2xl font-bold">Histórico de vendas</h1>
-        <FolderClock />
-      </div>
-      <ListVendas vendas={data} />
+      {data && data.length > 0 ? (
+        <>
+          <div className="p-default mt-default rounded-2xl bg-white">
+            {data && <ChartVenda dataVendas={data} />}
+          </div>
+          <div className="flex items-center gap- mt-default p-default rounded-2xl bg-color_3 text-color-2">
+            <h1 className="text-2xl font-bold">Histórico de vendas</h1>
+            <FolderClock />
+          </div>
+          <ListVendas vendas={data} />
+        </>
+      ) : null}
     </section>
   );
 }

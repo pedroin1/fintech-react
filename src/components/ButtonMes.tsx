@@ -41,7 +41,7 @@ export default function ButtonMes({ monthNumber, ...props }: ButtonProps) {
     <button
       onClick={() => handleClickSetMes(monthNumber)}
       className="px-10 py-6 border-none outline-none bg-color_3 capitalize font-bold rounded-2xl
-        hover:bg-color_2 hover:text-color_4 transition-colors"
+        hover:bg-color_2 hover:text-color_4 transition-colors medium:p-2"
       {...props}
     >
       {getMonthNameBr(monthNumber)}
