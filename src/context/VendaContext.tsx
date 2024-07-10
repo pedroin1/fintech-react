@@ -1,10 +1,10 @@
 import { PropsWithChildren, useState } from "react";
 import { createContext } from "react";
 import useFetch from "../hooks/UseFetch";
-import { Ivenda } from "../type/Types";
+import { IVenda } from "../type/types";
 
 type IContext = {
-  data: Ivenda[] | null;
+  data: IVenda[] | null;
   loading: boolean;
   error: any;
   dataInicio: string;
@@ -28,7 +28,7 @@ export const VendaContextProdiver = ({ children }: PropsWithChildren) => {
   const [dataInicio, setDataInicio] = useState<string>(getDate(30)); //30 dias atras
   const [dataFinal, setDataFinal] = useState<string>(getDate(0)); //data atual
 
-  const { data, loading, error } = useFetch<Ivenda[]>(
+  const { data, loading, error } = useFetch<IVenda[]>(
     `https://data.origamid.dev/vendas/?inicio=${dataInicio}&final=${dataFinal}`
   );
 

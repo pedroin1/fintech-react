@@ -1,5 +1,5 @@
 import { ComponentProps } from "react";
-import { Ivenda } from "../type/Types";
+import { IVenda } from "../type/types";
 import ItemVenda from "./ItemVenda";
 
 export default function ListVendas({ vendas, ...props }: ListProps) {
@@ -13,5 +13,5 @@ export default function ListVendas({ vendas, ...props }: ListProps) {
 }
 
 interface ListProps extends ComponentProps<"ul"> {
-  vendas: Ivenda[] | null;
+  vendas: IVenda[] | null;
 }

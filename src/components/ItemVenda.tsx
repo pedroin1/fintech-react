@@ -1,5 +1,5 @@
 import { SquareArrowUpRight } from "lucide-react";
-import { Ivenda } from "../type/Types";
+import { IVenda } from "../type/types";
 import { formatNumberToBrCurrency } from "../util/NumberUtils";
 
 export default function ItemVenda({ venda }: Props) {
@@ -7,7 +7,7 @@ export default function ItemVenda({ venda }: Props) {
   return (
     <div className="flex flex-wrap justify-between items-center mt-2 bg-white rounded-2xl p-default">
       <div className="flex items-center gap-1 hover:underline text-purple-700 cursor-pointer">
-        <a href="">{venda.id}</a>
+        <a href={`/venda/${venda.id}`}>{venda.id}</a>
         <SquareArrowUpRight size={18} />
       </div>
       <span>{venda.nome}</span>
@@ -17,5 +17,5 @@ export default function ItemVenda({ venda }: Props) {
 }
 
 interface Props {
-  venda: Ivenda | null;
+  venda: IVenda | null;
 }
