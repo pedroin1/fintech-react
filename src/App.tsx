@@ -11,7 +11,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <VendaContextProdiver>
-        <div className="grid grid-cols-[minmax(300px, 1fr) auto] w-full min-w-[1600px] min-h-screen max-h-fit font-montserrat text-color_2 bg-color_4 large:min-w-[1300px] medium:grid-cols-[1fr] medium:min-w-[500px]">
+        <div className="grid grid-cols-[300px_auto] w-full min-w-[1600px] min-h-screen max-h-fit font-montserrat text-color_2 bg-color_4 large:min-w-[1300px] medium:grid-cols-[1fr] medium:min-w-[500px]">
           <SidenavComponent />
           <main>
             <HeaderComponent />
